@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int k,a,b;
+long f(int x){
+	if(k==1) return abs(a*x+b);
+	else {
+		k--;
+		return f(f(x));
+		
+	}
+}
+int main(){
+	int x;
+	cin>>a>>b>>k>>x;
+	cout<<f(x)<<endl;
+	return 0;
+}
